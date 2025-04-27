@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Database Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            color: #2c3e50;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #003366;
+            font-size: 20px;
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .card span {
+            font-size: 40px;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🎓 College Database System</h1>
+        <p>Manage students, faculty, grades, and more from a unified portal</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <span>👨‍🎓</span>
+                <a href="modules/students.php">Manage Students</a>
+            </div>
+            <div class="card">
+                <span>👩‍🏫</span>
+                <a href="modules/faculty.php">Manage Faculty</a>
+            </div>
+            <div class="card">
+                <span>📊</span>
+                <a href="modules/grades.php">Grades</a>
+            </div>
+            <div class="card">
+                <span>🗓️</span>
+                <a href="modules/attendance.php">Attendance</a>
+            </div>
+            <div class="card">
+                <span>📅</span>
+                <a href="modules/schedule.php">Class Schedule</a>
+            </div>
+            <div class="card">
+                <span>📝</span>
+                <a href="modules/registration.php">Student Registration</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; <?php echo date("Y"); ?> College Database System | Built for Institutional Use
+    </footer>
+
+</body>
+</html>
